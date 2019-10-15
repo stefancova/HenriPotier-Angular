@@ -1,0 +1,5 @@
+<div class="minicart">
+  <p>Panier : {{ totalItems }}</p>
+  <p>€ : {{ total }}</p>
+  <p *ngIf="totalItems > 0"><a routerLink="/cart">Voir le panier</a></p>
+</div>

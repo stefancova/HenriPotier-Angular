@@ -1,0 +1,28 @@
+<form class="searchform">
+  <input
+    type="text"
+    name="search"
+    class="input"
+    placeholder="Votre recherche..."
+    [(ngModel)]="searchText"
+    autocomplete="off"
+  />
+</form>
+<ul class="columns is-tablet is-multiline">
+  <li
+    class="column  is-half-tablet is-one-quarter-desktop  item"
+    *ngFor="let book of books | filter: searchText"
+  >
+    <h2>{{ book.title }}</h2>
+    <img src="{{ book.cover }}" width="300" />
+    <div class="columns buybox">
+      <p class="column is-one-third price">{{ book.price }} €</p>
+      <p class="column is-two-thirds addtocart">
+        <button (click)="addToCart(book)" class="button is-primary">
+          Ajouter au panier
+        </button>
+      </p>
+    </div>
+    <!-- <p class="synopsis">{{ book.synopsis }}</p> -->
+  </li>
+</ul>

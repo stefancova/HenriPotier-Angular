@@ -131,5 +131,10 @@
       }
     }
   },
-  "defaultProject": "HarryPottier"
+  "defaultProject": "HarryPottier",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "sass"
+    }
+  }
 }

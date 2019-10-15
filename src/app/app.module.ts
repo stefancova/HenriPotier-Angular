@@ -1,16 +1,31 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { AppComponent } from './app.component';
+import { routing } from './app.routing';
+import { BooksComponent } from './components/books/books.component';
+import { CartComponent } from './components/cart/cart.component';
+import { MinicartComponent } from './components/minicart/minicart.component';
+import { ApiService } from './services/api.service';
+import { CartService } from './services/cart.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BooksComponent,
+    CartComponent,
+    MinicartComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    HttpClientModule,
+    Ng2SearchPipeModule,
+    routing
   ],
-  providers: [],
+  providers: [ApiService, CartService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
