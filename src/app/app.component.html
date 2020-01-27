@@ -1,8 +1,12 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="main">
-  <app-minicart></app-minicart>
-  <h1>
-    <a routerLink="/">Bibliothèque de {{ title }}</a>
-  </h1>
-  <router-outlet></router-outlet>
+  <header class="header">
+    <app-minicart></app-minicart>
+    <h1>
+      <a routerLink="/">Bibliothèque de {{ title }}</a>
+    </h1>
+  </header>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
 </div>

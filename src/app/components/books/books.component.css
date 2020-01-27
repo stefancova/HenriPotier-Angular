@@ -1,47 +1,46 @@
-.searchform{
-    margin-bottom: 1em;
+.searchform {
+  margin-bottom: 1em;
 }
 
-h2{
-    font-size :1.2rem;
-    margin-bottom: 1em;
-    text-align: center;
-    min-height: 40px;
+h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1em;
+  text-align: center;
+  min-height: 40px;
 }
 .item {
-    overflow: hidden;
-    position: relative;
+  overflow: hidden;
+  position: relative;
 }
 .item img {
-    width: 100%;
+  width: 100%;
 }
 .price {
-    font-weight: bold;
-    font-size: 2em;
+  font-weight: bold;
+  font-size: 2em;
 }
 
 .synopsis {
-    border: 1px solid;
-    position: absolute;
-    top:0;
-    left:0;
-    background: darkgray;
-    color: white;
-    transform-origin: left top;
-    transform: scale(0);
-    transition: all 250ms ease; 
-    font-size: 0.7rem;
+  border: 1px solid;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: darkgray;
+  color: white;
+  transform-origin: left top;
+  transform: scale(0);
+  transition: all 250ms ease;
+  font-size: 0.7rem;
 }
 .item:hover .synopsis {
-    transform: scale(1);
-} 
+  transform: scale(1);
+}
 .buybox {
-    text-align: center;
+  text-align: center;
 }
 
-
-@media(min-width: 769px) {
-    .buybox {
-        text-align: left;
-    }
+@media (min-width: 769px) {
+  .buybox {
+    text-align: left;
+  }
 }

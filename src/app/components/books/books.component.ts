@@ -1,13 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../../services/api.service';
-import { CartService } from '../../services/cart.service';
-
+import { Component, OnInit } from "@angular/core";
+import { ApiService } from "../../services/api.service";
+import { CartService } from "../../services/cart.service";
 @Component({
-  selector: 'app-books',
-  templateUrl: './books.component.html',
-  styleUrls: ['./books.component.css']
+  selector: "app-books",
+  templateUrl: "./books.component.html",
+  styleUrls: ["./books.component.css"]
 })
 export class BooksComponent implements OnInit {
+  public loading = true;
   public books = [];
   public searchText: string;
   constructor(
@@ -16,7 +16,10 @@ export class BooksComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.apiService.getBooks().subscribe(data => (this.books = data));
+    this.apiService.getBooks().subscribe(data => {
+      this.books = data;
+      this.loading = false;
+    });
   }
 
   addToCart(book) {
