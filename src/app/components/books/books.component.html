@@ -9,14 +9,14 @@
   />
 </form>
 <h1 *ngIf="loading">LOADING...</h1>
-<ul class="columns is-tablet is-multiline">
+<ul class="columns is-tablet is-multiline ">
   <li
-    class="column  is-half-tablet is-one-quarter-desktop  item"
-    *ngFor="let book of books | filter: searchText"
+    class="column is-half-tablet is-one-quarter-desktop  item"
+    *ngFor="let book of books | filter: searchText:'title'"
   >
     <h2>{{ book.title }}</h2>
     <img src="{{ book.cover }}" width="300" />
-    <div class="columns buybox">
+    <div class="columns is-gapless buybox">
       <p class="column is-one-third price">{{ book.price }} €</p>
       <p class="column is-two-thirds addtocart">
         <button (click)="addToCart(book)" class="button is-primary">

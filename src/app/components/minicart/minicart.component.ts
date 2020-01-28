@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { CartService } from '../../services/cart.service';
+import { Component, OnInit } from "@angular/core";
+import { CartService } from "../../services/cart.service";
 @Component({
-  selector: 'app-minicart',
-  templateUrl: './minicart.component.html',
-  styleUrls: ['./minicart.component.css']
+  selector: "app-minicart",
+  templateUrl: "./minicart.component.html",
+  styleUrls: ["./minicart.component.css"]
 })
 export class MinicartComponent implements OnInit {
   public totalItems = 0;
